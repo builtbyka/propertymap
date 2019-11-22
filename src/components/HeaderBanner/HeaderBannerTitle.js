@@ -9,9 +9,9 @@ function HeaderBannerTitle() {
   return (
     <A href="/">
       <h1 className={`${classes.title}`}>
-        Title
-        </h1>
-      <h2 className={classes.subtitle}>Subtitle</h2>
+        PerfectProperty.com
+      </h1>
+      <h2 className={classes.subtitle}>Find your home</h2>
     </A>
   );
 }

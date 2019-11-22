@@ -1,12 +1,35 @@
 import React from 'react';
 
-const LandingPage = () => {
+import Listing from '../../components/Listings/Listing';
+import Filter from '../../components/Filter/Filter';
 
-    return (
-        <div>
-            Landing Page (/view/1 to view overview)
-        </div>
-    );
+import useStyles from './style';
+// context
+import {
+  PropertyListingsProvider,
+  PropertyListingsConsumer,
+} from '../../context/PropertyListingsProvider';
+
+const LandingPage = () => {
+  const classes = useStyles();
+  return (
+    <div>
+      <Filter />
+      <PropertyListingsProvider>
+        <PropertyListingsConsumer>
+
+          {({ propertyListings }) => (
+            <div className={classes.root}>
+              {propertyListings.map((listing) => (
+                <Listing key={listing.id} listing={listing} />
+              ))}
+            </div>
+          )}
+
+        </PropertyListingsConsumer>
+      </PropertyListingsProvider>
+    </div>
+  );
 };
 
 

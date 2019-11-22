@@ -8,7 +8,7 @@ import HeaderBanner from '../components/HeaderBanner/HeaderBanner';
 const Wrapper = (props) => {
   const { children } = props;
   return (
-    <main style={{ maxWidth: 1024, margin: 'auto' }}>
+    <main style={{ margin: 'auto' }}>
       <CssBaseline />
       <HeaderBanner />
       {children}

@@ -17,7 +17,7 @@ describe('<HeaderBannerTitle />', () => {
     const container = shallow(<HeaderBannerTitle />);
     expect(
       container.find('h1').text(),
-    ).toEqual('Title');
+    ).toEqual('PerfectProperty.com');
   });
 
   it('renders an h2', () => {
@@ -29,6 +29,6 @@ describe('<HeaderBannerTitle />', () => {
     const container = shallow(<HeaderBannerTitle />);
     expect(
       container.find('h2').text(),
-    ).toEqual('Subtitle');
+    ).toEqual('Find your home');
   });
 });
